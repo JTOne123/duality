@@ -546,7 +546,7 @@ namespace Duality.Editor.Forms
 			if (fileDialog.ShowDialog(this) == DialogResult.OK)
 			{
 				DualityEditorApp.ProjectSettings.LauncherPath = PathHelper.MakeFilePathRelative(fileDialog.FileName);
-				DualityEditorApp.SaveProjectSettings();
+				DualityEditorApp.ProjectSettings.Save();
 				this.UpdateLaunchAppActions();
 			}
 		}
